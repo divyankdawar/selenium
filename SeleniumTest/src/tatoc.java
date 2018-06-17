@@ -16,20 +16,7 @@
 			driver.manage().window().maximize();
 			driver.findElement(By.linkText("Basic Course")).click();
 			driver.findElement(By.className("greenbox")).click();
-			//driver.findElement(By.linkText("Proceed")).click();
 	
-			//
-			/*try{
-				Thread.sleep(5000);
-			}catch(Exception e){e.printStackTrace();}*/
-			//driver.switchTo().frame(0);
-			/*WebElement box1 = driver.findElement(By
-					.xpath("//div[@id='answer'and contains(.,'Box 1')]"));
-			String box1Class = box1.getAttribute("className");
-			driver.switchTo().frame(0);*/
-			/*WebElement box2 = driver.findElement(By
-					.xpath("//div[@id='answer' and contains(.,'Box 2')]"));
-			String box2Class = box2.getAttribute("className");*/
 			boolean found=false;
 			driver.switchTo().frame("main");
 			//for (int i = 0; i < 10; i++) {
