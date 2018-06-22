@@ -58,6 +58,33 @@
 			WebElement submitButton = driver.findElement(By.id("submit"));
 			submitButton.click();
 			
+			
+			driver.findElement(By.linkText("Launch Popup Window")).click();
+			String MainWindow = driver.getWindowHandle();
+			Set<String> windows = driver.getWindowHandles();
+			Iterator<String> it = windows.iterator();
+			while(it.hasNext())
+			{
+				
+				String ChildWindow = it.next();	
+				driver.switchTo().window(ChildWindow);	
+				if(!MainWindow.equalsIgnoreCase(ChildWindow))	
+				{                                                                                                  
+		           		driver.findElement(By.id("name")).sendKeys("RAHUL RAJAN");
+		            		driver.findElement(By.id("submit")).click();
+		            		break;
+				}
+			}
+			driver.switchTo().window(MainWindow);
+			driver.findElement(By.linkText("Proceed")).click();
+			
+			
+			driver.findElement(By.linkText("Generate Token")).click();
+			String Cookie_val = driver.findElement(By.id("token")).getText();
+			Cookie cookie = new Cookie("Token", Cookie_val.substring(7));
+			driver.manage().addCookie(cookie);
+			driver.findElement(By.linkText("Proceed")).click();
+			
 	
 		}
 	
