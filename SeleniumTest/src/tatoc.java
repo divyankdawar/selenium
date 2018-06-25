@@ -70,7 +70,7 @@
 				driver.switchTo().window(ChildWindow);	
 				if(!MainWindow.equalsIgnoreCase(ChildWindow))	
 				{                                                                                                  
-		           		driver.findElement(By.id("name")).sendKeys("RAHUL RAJAN");
+		           		driver.findElement(By.id("name")).sendKeys("DIVYANK DAWAR");
 		            		driver.findElement(By.id("submit")).click();
 		            		break;
 				}
