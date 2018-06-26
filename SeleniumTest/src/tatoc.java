@@ -50,10 +50,7 @@
 			WebElement drop = driver.findElement(By.id("dropbox"));
 			action.dragAndDrop(drag, drop).perform();
 			driver.findElement(By.linkText("Proceed")).click();
-			driver.findElement(By.linkText("Launch Popup Window")).click();
-			driver.findElement(By.id("name")).click();
-			WebElement searchBox = driver.findElement(By.id("name"));
-			searchBox.sendKeys("divyankdawar");
+			
 			
 			WebElement submitButton = driver.findElement(By.id("submit"));
 			submitButton.click();
